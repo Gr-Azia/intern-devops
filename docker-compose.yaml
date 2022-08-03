@@ -1,0 +1,19 @@
+version: '3.8'
+
+
+services:
+  webappgrace:
+    image: httpd
+    container_name: webappgrace
+    volumes:
+      - ./index.html:/usr/local/apache2/htdocs/index.html
+    ports:
+      - 83:80
+  webappgrace2:
+    image: httpd
+    container_name: webappgrace2
+    volumes:
+      - ./index1.html:/usr/local/apache2/htdocs/index.html
+    ports:
+      - 93:80
+
